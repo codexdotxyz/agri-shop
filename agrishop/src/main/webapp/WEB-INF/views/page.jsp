@@ -48,30 +48,34 @@
 		<%@include file="./shared/navbar.jsp"%>
 
 		<div class="content">
-			<!-- Page Content -->
+			<!-- Load the home content -->
 			<c:if test="${userClicksHome==true}">
 				<%@include file="home.jsp"%>
 			</c:if>
-
+			<!-- Load only when user clicks contact -->
 			<c:if test="${userClicksContact==true}">
 				<%@include file="contact.jsp"%>
 			</c:if>
-
+			<!-- Load only when user clicks about -->
 			<c:if test="${userClicksAbout==true}">
 				<%@include file="aboutus.jsp"%>
 			</c:if>
-			<!-- /.container -->
+			<!-- Load only when user clicks listProducts -->
+			<c:if
+				test="${userClicksAllProducts == true or userClicksCategoryProducts == true}">
+				<%@include file="listProducts.jsp"%>
+			</c:if>
 		</div>
-		
-			<!-- Footer -->
-			<%@include file="./shared/footer.jsp"%>
-		
+
+		<!-- Footer -->
+		<%@include file="./shared/footer.jsp"%>
+
 		<!-- jQuery -->
 		<script src="${js}/jquery.js"></script>
 
 		<!-- Bootstrap Core JavaScript -->
 		<script src="${js}/bootstrap.min.js"></script>
-		
+
 		<!-- own created javascript -->
 		<script src="${js}/myapp.js"></script>
 	</div>

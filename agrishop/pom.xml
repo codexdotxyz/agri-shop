@@ -13,6 +13,12 @@
 		<jstl.version>1.2</jstl.version>
 	</properties>
 	<dependencies>
+		<!-- agrishop backend project dependency -->
+		<dependency>
+			<groupId>xyz.shopping</groupId>
+			<artifactId>agrishopbackend</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 		<!-- https://mvnrepository.com/artifact/javax/javaee-api -->
 		<dependency>
 			<groupId>javax</groupId>
